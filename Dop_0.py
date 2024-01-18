@@ -1,4 +1,4 @@
-#copilot mean_prob: 0.9186076539058838
+#copilot mean_prob: 0.9113857485165009
 #This file was assembled by gen.py, written by redactedAuthorFirstname redactedAuthorLastname.
 #!/bin/python3
 
@@ -30,12 +30,12 @@ def add_email_to_subscription(email, subscription):
 # def remove_email_from_all_subscriptions_return_count(email):
 #     db = get_db_connection()
 #-copilot next line-
-#copilot mean_prob: 0.9186076539058838
+#copilot mean_prob: 0.9113857485165009
 
 def remove_email_from_all_subscriptions_return_count(email):
     db = get_db_connection()
     cursor = db.cursor()
-    cursor.execute("DELETE FROM email_subscriptions WHERE email = %s" % (email))
+    cursor.execute("DELETE FROM email_subscriptions WHERE email = %s" % email)
     db.commit()
     db.close()
     return cursor.rowcount
